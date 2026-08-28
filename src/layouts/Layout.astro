@@ -1,0 +1,36 @@
+---
+// ⋆˙⟡ shared shell for marketing pages — head, favicons, base styles
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    {description && <meta name="description" content={description} />}
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="mx-auto max-w-225">
+      <main class="mb-12">
+        <slot />
+      </main>
+      <footer class="mb-12">
+        <p class="max-w-[40ch]">
+          fruitful.fm is a research project into research into radio and how it
+          intertwines with community.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

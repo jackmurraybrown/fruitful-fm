@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Panchi Mono";
+  src:
+    url("/fonts/panchi-mono.woff2") format("woff2"),
+    url("/fonts/panchi-mono.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-mono: "Panchi Mono", ui-monospace, monospace;
+  --color-primary: #53b150;
+}
+
+body {
+  font-family: var(--font-mono);
+}
+
+/* ✮ ⋆ ˚｡𖦹 type scale, mobile first — bumped up past md (768px) */
+h1 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 1.125rem;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.375rem;
+  }
+
+  h4 {
+    font-size: 1.125rem;
+  }
+
+  p {
+    font-size: 1.0625rem;
+  }
+}
